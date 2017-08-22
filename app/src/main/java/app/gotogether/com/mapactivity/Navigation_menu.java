@@ -1,6 +1,6 @@
 package app.gotogether.com.mapactivity;
 
-        import android.app.ProgressDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -63,8 +63,8 @@ public class Navigation_menu extends AppCompatActivity
 
         // textView_main_result
 
-        GetData task = new GetData();
-        task.execute("http://211.253.9.84/getgrouplist.php");
+      //  GetData task = new GetData();
+      //  task.execute("http://211.253.9.84/getgrouplist.php");
 
         /* 플로팅 아이콘 구현
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -84,7 +84,8 @@ public class Navigation_menu extends AppCompatActivity
                 Navigation_menu.this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(Navigation_menu.this);
         //기본으로 띄워줄 화면
         displaySelectedScreen(R.id.login);
     }
@@ -283,7 +284,6 @@ public class Navigation_menu extends AppCompatActivity
         return true;
     }
 */
-   //그룹들
     private void addMenuItemInNavMenuDrawer() {
         NavigationView navView = (NavigationView) findViewById(R.id.nav_view);
 
@@ -362,8 +362,11 @@ public class Navigation_menu extends AppCompatActivity
                 break;
 
             case R.id.navi_boss_page:
-                Intent navi_boss_page = new Intent(Navigation_menu.this, BossPage.class);
-                startActivity(navi_boss_page);
+                Intent intent = new Intent(Navigation_menu.this, BossPage.class);
+                intent.putExtra("group_id", "1");
+                intent.putExtra("my_id", "sss");
+                startActivity(intent);
+                //
 
                 break;
             /*

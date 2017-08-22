@@ -34,7 +34,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".Navigation_menu"
             android:label="@string/title_activity_navigation_menu"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -45,7 +45,8 @@
         </activity>
         <activity android:name=".ListViewActivity" />
         <activity android:name=".MyActivity" />
-        <activity android:name=".Navigation_menu" />
+        <activity android:name=".BossPage" />
+        <activity android:name=".LoginActivity" />
 <activity android:name=".NewActivity"/>
     </application>
 

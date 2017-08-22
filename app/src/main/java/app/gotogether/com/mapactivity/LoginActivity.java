@@ -137,7 +137,7 @@ public class LoginActivity extends AppCompatActivity {
                         .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent intent = new Intent(LoginActivity.this, MyActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, MyActivity.class); // 일단 navigation으로
                                 intent.putExtra("sId", sId);
                                 intent.putExtra("sPw", sPw);
                                 startActivityForResult(intent, SUB_ACTIVITY_CODE);

@@ -3,6 +3,7 @@ package app.gotogether.com.mapactivity;
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -144,6 +145,13 @@ public class BossPage extends AppCompatActivity {
 
         // 그룹 정보 불러오기
         mTextViewResult = (TextView)findViewById(R.id.result_text);
+
+        // 그룹의 id값 받아오기
+        Intent intent = getIntent(); // 운영체에가 인텐트를 띄어줌 인텐트를 받아옴
+        String group_id = intent.getStringExtra("group_id");
+        String my_id = intent.getStringExtra("my_id");
+
+        Toast.makeText(BossPage.this, group_id + my_id, Toast.LENGTH_SHORT).show();
 
         // 그룹리스트 DB 갖고오기
         GetData2 task = new GetData2(); // 서버에서 데이터 갖고오기

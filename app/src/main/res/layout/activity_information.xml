@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="app.gotogether.com.mapactivity.BossPage">
+    tools:context="app.gotogether.com.calendertest.information">
 
     <TextView
         android:id="@+id/textView"

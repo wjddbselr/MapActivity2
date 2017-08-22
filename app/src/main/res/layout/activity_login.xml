@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/login"
     tools:context="app.gotogether.com.mapactivity.LoginActivity">
 
 
@@ -42,7 +43,12 @@
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="349dp" />
 
-
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Button" />
 
 
 </LinearLayout>
